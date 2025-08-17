@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { GraduationCap, BookOpen, Calendar } from 'lucide-react';
+import { motion } from 'framer-motion';
 import profileImage from '@/assets/profile-image.jpg';
 
 const AboutSection = () => {
@@ -22,30 +23,49 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
           <div className="w-24 h-1 hero-gradient mx-auto rounded-full"></div>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="fade-in">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <div className="relative">
-              <div className="w-80 h-80 mx-auto relative">
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                className="w-80 h-80 mx-auto relative"
+              >
                 <img 
                   src={profileImage} 
                   alt="Dalen Phea" 
-                  className="w-full h-full object-cover rounded-2xl hover-scale transition-all duration-500"
+                  className="w-full h-full object-cover rounded-2xl transition-all duration-500"
                 />
                 <div className="absolute inset-0 rounded-2xl ring-4 ring-primary/20 hover:ring-primary/40 transition-all duration-500"></div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="fade-in-delay-1">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <p className="text-lg text-foreground/90 leading-relaxed mb-8">
-              I am currently pursuing a bachelor's degree in Information Technology Engineering at 
+              I am currently pursuing a bachelor's degree in information technology engineering at 
               <span className="gradient-text font-semibold"> Royal Phnom Penh University</span>.
             </p>
             <p className="text-lg text-foreground/90 leading-relaxed mb-8">
@@ -58,7 +78,7 @@ const AboutSection = () => {
               I am eager to apply my academic knowledge and practical skills to contribute to 
               innovative projects and make a meaningful impact in the tech industry.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="mt-16">
