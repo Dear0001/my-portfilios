@@ -41,14 +41,14 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "dalen.phea@example.com",
-      href: "mailto:dalen.phea@example.com"
+      value: "dalensophea34@gmail.com",
+      href: "mailto:dalensophea34@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+855 12 345 678",
-      href: "tel:+85512345678"
+      value: "+855 31 339 9766",
+      href: "tel:+855313399766"
     },
     {
       icon: MapPin,
@@ -62,19 +62,19 @@ const ContactSection = () => {
     {
       icon: Github,
       name: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/Dear0001",
       color: "hover:text-gray-400"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/dalen-phea-390148260/",
       color: "hover:text-blue-400"
     },
     {
       icon: Mail,
       name: "Email",
-      href: "mailto:dalen.phea@example.com",
+      href: "mailto:dalensophea34@gmail.com",
       color: "hover:text-red-400"
     }
   ];
